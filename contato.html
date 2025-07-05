@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com o Bolters & Paints">
+    <title>Contato | Bolters & Paints</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="header-box">
+        <h1>Bolters & Paints</h1>
+        <p>Um blog sobre pintura de miniaturas para jogos</p>
+    </div>
+</header>
+
+<nav>
+        <div class="menu-mobile">
+            <button id="botao-menu">☰ Menu</button>
+        </div>
+        <ul id="menu-links">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="materiais.html">Materiais</a></li>
+            <li><a href="tecnicas.html">Técnicas</a></li>
+            <li><a href="jogos.html">Jogos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+</nav>
+
+<main>
+    <div class="container">
+        <section>
+            <h2>Fale com a gente</h2>
+                <div class="form-container">
+                    <form id="form-contato">
+                        <label for="nome">Nome:</label><br>
+                        <input type="text" id="nome" name="nome"><br><br>
+
+                        <label for="email">E-mail:</label><br>
+                        <input type="email" id="email" name="email"><br><br>
+
+                        <label for="mensagem">Mensagem:</label><br>
+                        <textarea id="mensagem" name="mensagem" rows="5"></textarea><br><br>
+
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>  
+            <p id="mensagem-erro" style="color: red;"></p>
+        </section>
+    </div>    
+</main>
+
+<footer>
+    <p>&copy; 2025 Bolters & Paints. Todos os direitos reservados.</p>
+</footer>
+
+<script src="js/script.js"></script>
+<button id="voltar-topo" title="Voltar ao topo">↑</button>
+</body>
+</html>

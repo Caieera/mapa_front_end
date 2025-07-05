@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box;
+}
+
+
+/* Fundo geral e texto */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1C0B0B; 
+    color: #E0CFCF; 
+    line-height: 1.6;
+}
+
+
+/*Largura do conteúdo */
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/* Cabeçalho */
+header {
+    background: url('../img/cabecalho_1.jpg') no-repeat center center;
+    background-size: cover;
+    color: #E0CFCF;
+    padding: 80px 10px 40px 10px; 
+    text-align: center;
+    background-position: center 30%; 
+    box-shadow: inset 0 0 100px rgba(44, 11, 11, 0.8); 
+}
+
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;            
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    margin: 0 15px;         
+}
+
+nav a {
+    text-decoration: none;
+    color: #E0CFCF;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: block;        
+    transition: background-color 0.3s;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #5C1313;
+    border-radius: 4px;
+}
+
+
+/* Botões primários */
+form button {
+    background-color: #8B0000;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+form button:hover,
+form button:focus {
+    background-color: #B22222;
+}
+
+/* Botões secundários com bege */
+button.secundario {
+    background-color: #D9C5A5; 
+    color: #1C0B0B;
+    border: none;
+    padding: 10px 20px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.secundario:hover,
+button.secundario:focus {
+    background-color: #c1b18f;
+}
+
+/* Caixas de conteúdo (exemplo para seções ou artigos) */
+section {
+    background-color: #D9C5A5;
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    color: #1C0B0B;
+}
+
+/* Rodapé */
+footer {
+    background-color: #2E0F0F;
+    color: #E0CFCF;
+    text-align: center;
+    padding: 20px 10px;
+    font-size: 0.9rem;
+}
+
+/* Navegação */
+
+/* Botão do menu  */
+#botao-menu {
+    display: none;
+}
+
+/* Menu no desktop */
+#menu-links {
+    display: flex;
+}
+
+/* Estilos para mobile */
+@media (max-width: 600px) {
+    .menu-mobile {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    #botao-menu {
+        display: block;
+        background-color: #8B0000;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 5px;
+        margin: 10px auto;  
+        text-align: center; 
+        max-width: 200px;  
+    }
+
+    #menu-links {
+        display: none; /* esconde o menu no mobile */
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        background-color: #2E0F0F;
+        border-radius: 8px;
+        box-shadow: 0 0 8px rgba(0,0,0,0.4);
+        margin-top: 10px;
+    }
+
+    #menu-links.aberto {
+        display: flex; /* exibe o menu quando a classe "aberto" for adicionada via JS */
+      
+    }
+
+    nav ul {
+        flex-direction: column;  
+        align-items: center;
+    }
+
+    nav li {
+        margin: 8px 0;           
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+.galeria img {
+    width: 30%;           
+    height: 250px;        
+    object-fit: cover;    
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+
+.intro,
+.sobre-hobby {
+    background-color: #D9C5A5;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    color: #1C0B0B;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.intro h2,
+.sobre-hobby h2 {
+    color: #8B0000;
+}
+
+/*Página - Materiais*/
+
+.materiais img {
+    max-width: 350px;      
+    width: 80%;           
+    height: auto;
+    display: block;
+    margin: 10px auto;    
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+/* Página - Técnica*/
+
+.tecnica {
+    background-color: #D9C5A5; 
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    color: #1C0B0B;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.tecnica h3 {
+    margin-bottom: 10px;
+    color: #8B0000; 
+}
+
+.tecnica img {
+    max-width: 600px;      
+    width: 100%;           
+    height: auto;
+    display: block;
+    margin: 10px auto;    
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+/* Galeria - Index*/
+.galeria img:hover {
+    transform: scale(1.05);
+}
+#imagem-expandida-container {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#imagem-expandida-container img {
+    max-width: 90%;
+    max-height: 90%;
+    border: 4px solid #D9C5A5;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    background-color: #1C0B0B;
+    margin: 0 50px; 
+}
+
+#imagem-expandida-container button#fechar-galeria {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    background: #D9C5A5;
+    color: #1C0B0B;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+}
+
+#imagem-expandida-container button#fechar-galeria:hover {
+    background-color: #c1b18f;
+}
+
+/* Botões de navegação da galeria */
+#imagem-expandida-container button.seta-galeria {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #D9C5A5;
+    color: #1C0B0B;
+    font-size: 3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s;
+    user-select: none;
+}
+
+#imagem-expandida-container button#seta-galeria:hover {
+    background-color: #c1b18f;
+}
+
+#imagem-expandida-container button#voltar-img {
+    left: 20px;
+}
+
+#imagem-expandida-container button#avancar-img {
+    right: 20px;
+}
+
+
+/* Botão - Voltar ao topo */
+#voltar-topo {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none; 
+    background-color: #bead91; 
+    color: #1C0B0B;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    transition: background-color 0.3s;
+    z-index: 10000;
+}
+
+#voltar-topo:hover {
+    background-color: #a6946d;
+}
+
+
+/* Imagem Cabeçalho*/
+
+.header-box {
+    background-color: rgba(28, 11, 11, 0.75); 
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+header h1,
+header p {
+    margin: 0;
+    color: #FFD9A0; 
+    text-shadow: 1px 1px 2px #000;
+}
+
+/* Página Jogos*/
+
+.jogos {
+    background-color: #D9C5A5;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    color: #1C0B0B;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.jogos h2 {
+    color: #8B0000;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.bloco-jogo {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #bfa98a;
+}
+
+.bloco-jogo:last-child {
+    border-bottom: none;
+}
+
+.bloco-jogo h3 {
+    color: #8B0000;
+    margin-bottom: 10px;
+}
+
+.bloco-jogo img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.3);
+}
+
+.fonte-imagem {
+    font-size: 0.8rem;
+    color: #999;
+    text-align: center;
+    margin-top: 5px;
+}
+
+
+/* Formulário */
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #2E0F0F;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+
+/* Inputs e textarea */
+form input[type="text"],
+form input[type="email"],
+form textarea {
+    width: 100%;
+    padding: 8px 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #8B0000;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #2E0F0F;
+    color: #E0CFCF;
+   
+}
+
+form label{
+    color: #E0CFCF;
+    font-weight: bold;
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form textarea::placeholder {
+    color: #B22222;
+}
